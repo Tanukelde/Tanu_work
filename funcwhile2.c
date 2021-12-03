@@ -1,0 +1,12 @@
+#include<stdio.h>
+void print();
+void print()
+{
+ int i;
+ for(i=10;i>=1;i--)
+ printf("%d\n",i);
+}
+void main()
+{
+ print();
+}

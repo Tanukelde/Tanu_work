@@ -1,0 +1,1 @@
+//perform scalar matrix multiplication
