@@ -1,0 +1,47 @@
+ //perform scalar matrix multiplication
+ #include <stdio.h>
+#define SIZE 3 
+
+int multiplication(int arr[] );
+
+int main()
+{
+   int arr;
+   multiplication(arr);
+ }
+ 
+ int multiplication(int arr[])
+ {
+    int A[SIZE][SIZE]; 
+    int num, row, col;
+    printf("Enter elements in matrix of size %dx%d: \n", SIZE, SIZE);
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+            scanf("%d", &A[row][col]);
+        }
+    }
+
+    printf("Enter any number to multiply with matrix A: ");
+    scanf("%d", &num);
+
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+      
+            A[row][col] = num * A[row][col];
+        }
+    }
+    
+    printf("\nResultant matrix c.A = \n");
+    for(row=0; row<SIZE; row++)
+    {
+        for(col=0; col<SIZE; col++)
+        {
+            printf("%d ", A[row][col]);
+        }
+        printf("\n");
+    }
+}
